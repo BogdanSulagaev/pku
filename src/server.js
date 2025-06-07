@@ -20,6 +20,25 @@ app.get('/api/foods', (req, res) => {
   res.json(foods);
 });
 
+app.get('/add', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'add.html'));
+});
+
+app.post('/add', (req, res) => {
+  const { name, phenylalanineMg } = req.body;
+  if (name && phenylalanineMg) {
+    const newFood = {
+      id: foods.length + 1,
+      name,
+      phenylalanineMg: Number(phenylalanineMg),
+    };
+    foods.push(newFood);
+    res.redirect('/');
+  } else {
+    res.status(400).send('Invalid data');
+  }
+});
+
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });

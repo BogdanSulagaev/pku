@@ -20,6 +20,10 @@ The application runs on [http://localhost:3000](http://localhost:3000).
 The app includes a simple login form available at `/login` with hard-coded
 credentials (`user`/`pass`) for demonstration purposes.
 
+## Add Foods
+Visit `/add` to enter a new food and its phenylalanine amount. Newly added
+items appear on the main page.
+
 ## File Structure
 - `src/server.js` – Express server with a sample API endpoint.
 - `src/public/` – Static front‑end files.
