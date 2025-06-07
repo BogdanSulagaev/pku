@@ -16,6 +16,10 @@ npm start
 ```
 The application runs on [http://localhost:3000](http://localhost:3000).
 
+## Authentication
+The app includes a simple login form available at `/login` with hard-coded
+credentials (`user`/`pass`) for demonstration purposes.
+
 ## File Structure
 - `src/server.js` – Express server with a sample API endpoint.
 - `src/public/` – Static front‑end files.
